@@ -1,0 +1,21 @@
+// ----- Creative Coding Week9 Arduino Switch
+// ----- Liqian Zhang
+// ----- Reference: Arduino built in examples - Blink
+// ----- Creating a sensor to detect if user is standing on the right spot, if not, the orange light blink; if yes, green light turn on. 
+// ----- With this idea, I created 2 individual circuits. 
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  // ----- I put the orange LED which blink in pin 13, so I put 13 here. 
+  pinMode(13, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+// ----- Because the blink indicates warning, so I changed the delay to 100(0.1 seconds) to warn user that they are standing in the wrong spot. 
+void loop() {
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(100);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(100);                       // wait for a second
+}
