@@ -1,3 +1,4 @@
+
 // ----- Creative Coding Week9 Arduino Switch
 // ----- Liqian Zhang
 // ----- Reference: Arduino built in examples - Blink; Button;
@@ -26,6 +27,8 @@ void setup() {
 void loop() {
   // ----- follow the example, use this function to read the state of pushbutton value. 
   buttonState = digitalRead(buttonPin);
+  Serial.println(digitalRead(buttonPin));
+
 
   // ----- using if statement here. If user stands in wrong spot, the orange light will blink; otherwise green light keeps on with the "breath" effect. 
   // ----- I'm not sure why when I use high here for if statement status, it won't work. I have to change to low. 
