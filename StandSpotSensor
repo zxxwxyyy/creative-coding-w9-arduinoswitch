@@ -31,7 +31,7 @@ void loop() {
 
 
   // ----- using if statement here. If user stands in wrong spot, the orange light will blink; otherwise green light keeps on with the "breath" effect. 
-  // ----- I'm not sure why when I use high here for if statement status, it won't work. I have to change to low. 
+  // ----- when my switch close, the electic will go directly to the ground, which means the input will equal to 0 (LOW)
   if(buttonState == LOW){
   digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(100);                       // wait for a second
