@@ -32,13 +32,14 @@ void loop() {
 
   // ----- using if statement here. If user stands in wrong spot, the orange light will blink; otherwise green light keeps on with the "breath" effect. 
   // ----- when my switch close, the electic will go directly to the ground, which means the input will equal to 0 (LOW)
+  // ----- reference: https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/
   if(buttonState == LOW){
   digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(100);                       // wait for a second
   digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
   delay(100);                       // wait for a second
   }else{
-  // ----- creating the "breath" effect by using for loop and analogWrite function. Reference from: https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/; https://www.arduino.cc/reference/en/language/structure/control-structure/for/
+  // ----- creating the "breath" effect by using for loop and analogWrite function. Reference from:https://www.arduino.cc/reference/en/language/structure/control-structure/for/; https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/
  for (int i = 0; i <= 255; i++) {
     analogWrite(greenLight, i);
     delay(10);
